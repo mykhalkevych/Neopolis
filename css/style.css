@@ -417,10 +417,11 @@ i.author{
 } 
 .subscribe button[type="submit"] i,form.contact button i{
 	display: inline-block;
-	width: 25px;
+	width: 14px;
 	height: 12px;
+	margin-right: 10px;
 	margin-bottom: -2px;
-	background: url(../img/arrow_down.png) no-repeat;
+	background: url(../img/arrows.png) no-repeat;
 }
 .subscribe button[type="submit"]:hover ,form.contact button:hover{
 	background: #3399ff;
@@ -573,10 +574,11 @@ section.page .page_title{
 .contacts .page_title{
 	background: url(../img/contact_bg.jpg) no-repeat ; 
 }
-.contacts p{
+.contacts p, .cooperation p.text-center{
 	font-family: 'PFDinDisplayProMedium';
 	font-size: 24px;
 	color: #3399ff;
+	margin-bottom: 55px;
 }
 form.contact input,
 .selectbox .select,
@@ -803,6 +805,21 @@ mark cite{
 .manifest .page_title{
 	background: url(../img/manifest_bg.jpg) no-repeat ; 
 }
+/*********Cooperation*****/
+.cooperation .page_title{
+	background: url(../img/сooperation_bg.jpg) no-repeat ; 
+}
+.cooperation p.text-center{
+	margin-top: 30px;
+}
+.cooperation form button i{
+    height: 13px;
+    background-position: -14px 0px;
+}
+.cooperation form button:hover i{
+	background-position: -14px -13px;
+}
+
 /************responsive******/
 @media (min-width: 1600px){
 	.description{
