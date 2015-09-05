@@ -748,6 +748,9 @@ mark cite{
 	font-size: 24px;
 	text-transform: uppercase;
 } 
+.all_publish a:hover{
+	text-decoration: none;
+}
 .post_tags p,.soc_share p{
 	font-family: 'PFDinTextProMedium';
 	text-transform: uppercase;
@@ -820,6 +823,31 @@ mark cite{
 	background-position: -14px -13px;
 }
 
+/************aboutAuthor***********/
+.aboutauthor .page_title{
+	background: url(../img/aboutAuthor_bg.jpg) no-repeat ; 
+}
+.author_info{
+	font-size: 16px;
+}
+.author_info  p strong{
+	font-family: 'PFDinDisplayProMedium';
+	font-weight: normal;
+}
+.author_info p.name {
+    font-size: 36px;
+}
+.author_info .photo{
+	height: 160px;
+	overflow: hidden;
+}
+.author_info .photo img{
+	width: 100%;
+	height: auto;
+}
+.aboutauthor .all_publish{
+	text-transform: none;
+}
 /************responsive******/
 @media (min-width: 1600px){
 	.description{
