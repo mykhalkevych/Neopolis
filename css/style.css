@@ -543,15 +543,20 @@ footer .copyright{
 	}
 
 /******************CONTACT***************************/
+.page{
+	background: #ececec;
+}
 .page_title{
 	padding-top: 80px;
 	height: 340px;
+	display: table;
+	width: 100%;
 	
 }
-.page_title h2{
-	font-family: 'PFDinDisplayProLight';
-	margin: 0;
-	line-height: 260px;
+.page_title p.title{
+	display: table-cell;
+	vertical-align: middle;
+	font-family: 'PFDinDisplayProLight'; 
 	font-size: 56px;
 	color: #fff;
 }
@@ -559,12 +564,13 @@ footer .copyright{
 	padding-top: 75px;
 	padding-bottom: 60px;
 }
-.contacts .page_title{
-	background: url(../img/contact_bg.jpg) no-repeat ;
+section.page .page_title{
 	background-attachment: fixed;
 	-webkit-background-size: cover;
 	background-size: cover;
-	
+}
+.contacts .page_title{
+	background: url(../img/contact_bg.jpg) no-repeat ; 
 }
 .contacts p{
 	font-family: 'PFDinDisplayProMedium';
@@ -599,6 +605,9 @@ form.contact button{
 .selectbox, .selectbox .select{
 	width: 100%;
 } 
+.selectbox .select{
+	background: #fff;
+}
 .selectbox .select:hover, .selectbox.open .select{
 	background: #3399ff;
 	border-color: #3399ff; 
@@ -668,6 +677,42 @@ form.contact button{
 		filter: "alpha(opacity=50)"; -ms-filter: "alpha(opacity=50)"; 
 	}
 /*************************************/
+
+/**********POST**************/
+.post .page_title{
+	background: url(../img/post_bg.jpg) no-repeat ; 
+}
+article {  
+	font-family: 'PFDinTextProLight';
+	font-size: 16px;
+	color: #141719;
+    -webkit-column-count:2;  
+    -moz-column-count:2;  
+    column-count:2;  
+}
+article {     
+    -webkit-column-gap: 60px;  
+    -moz-column-gap: 60px;  
+    column-gap: 60px;  
+} 
+article strong{
+	font-family: 'PFDinTextProMedium';
+	font-weight: normal;
+}
+blockquote { 
+    font-size: 16px;
+    border-left: 4px solid #3399ff;
+    background-color: rgba( 27, 45, 61,.8 );
+    color: #fff;
+}
+
+
+
+
+
+
+
+
 /************responsive******/
 @media (min-width: 1600px){
 	 .description{
