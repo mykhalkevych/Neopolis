@@ -713,8 +713,7 @@ article {
 	column-count:2;
 	-webkit-column-gap: 60px;  
 	-moz-column-gap: 60px;  
-	column-gap: 60px;   
-	padding-bottom: 50px; 
+	column-gap: 60px;    
 } 
 article strong{
 	font-family: 'PFDinTextProMedium';
@@ -758,6 +757,7 @@ mark cite{
 .soc_share,.post_tags{
 	padding-left: 35px;
 	line-height: 40px;
+	margin-top: 50px;
 }
 .post_tags ul,.soc_share ul{
 	padding: 0;
@@ -799,7 +799,10 @@ mark cite{
 	border-color: #3399ff;
 	color: #fff;
 }
-
+/********MANIFESR*********/
+.manifest .page_title{
+	background: url(../img/manifest_bg.jpg) no-repeat ; 
+}
 /************responsive******/
 @media (min-width: 1600px){
 	.description{
