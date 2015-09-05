@@ -237,7 +237,7 @@ a:focus{
 	position: relative;
 	padding-left: 25px; 
 }
-.filters li a:not(#all):before{
+.filters li a:not(#all):before,.title span i{
 	content: "";
 	position: absolute;
 	top: 11px;
@@ -324,7 +324,7 @@ a:focus{
 	border-top: 60px solid  rgba( 56, 155, 254, .6);
 	border-left: 60px solid transparent 
 } 
-.stiker i{
+.stiker i {
 	display: block;
 	width: 20px;
 	position: absolute;
@@ -344,7 +344,7 @@ i.listen{
 }
 i.author{
 	background-position: -90px -20px;
-}
+} 
 /******pagination******/
 
 .pagination{
@@ -682,6 +682,27 @@ form.contact button{
 /**********POST**************/
 .post .page_title{
 	background: url(../img/post_bg.jpg) no-repeat ; 
+}
+p.title span{
+	font-family: 'PFDinDisplayProMedium';
+	font-size: 20px;
+	display: inline-block;
+	position: relative;
+	padding-left: 25px;
+}
+p.title span.post_category{
+	margin-right: 35px;
+}
+.title span i{ 
+    background: url(../img/icons.png) no-repeat;
+    left: 0;
+    top: 5px;
+}
+.title span i.read{
+	background-position: 0px -20px;
+} 
+.title span i.clock{
+	background-position: -112px -20px;
 }
 article {  
 	font-family: 'PFDinTextProLight';
