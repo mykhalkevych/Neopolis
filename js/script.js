@@ -1,49 +1,76 @@
-$(document).ready(function(){
-    var $menu = $("#menu");
-	$(window).scroll(function(){
-		if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
-            $menu.fadeOut('fast',function(){
-                $(this).removeClass("default")
-                    .addClass("fixed transbg")
-                    .fadeIn('fast');
-                });
-            } else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
-                $menu.fadeOut('fast',function(){
-                    $(this).removeClass("fixed transbg")
-                           .addClass("default")
-                           .fadeIn('fast');
-                });
-            }
-        });
-        
-        $menu.hover(
-            function(){
-                if( $(this).hasClass('fixed') ){
-                    $(this).addClass('default');
-                }
-            },
-            function(){
-                if( $(this).hasClass('fixed') ){
-                    $(this).removeClass('default');
-                }
-            });
-    });
-$(document).ready(function() {
-   $('a[href^="#"]').click(function () { 
-     elementClick = $(this).attr("href");
-     destination = $(elementClick).offset().top;
-     if($.browser.safari){
-       $('body').animate( { scrollTop: destination }, 1100 );
-     }else{
-       $('html').animate( { scrollTop: destination }, 1100 );
-     }
-     return false;
-   });
- }); 
- 
-	function play(){
+  jQuery(document).ready(function($){ 
+/*select*/ 
+$(".select").selectbox(); 
 
-		document.getElementById('video1').style.visibility="visible";
-		var source=document.getElementsByTagName("iframe")[0].getAttribute("src");
-		document.getElementsByTagName("iframe")[0].setAttribute("src",source+"?autoplay=1"); 
-	}  
+
+// categories Isotope
+var container = $('#categories-wrap');  
+
+
+container.isotope({
+    animationEngine : 'best-available',
+    animationOptions: {
+        duration: 200,
+        queue: false
+    },
+    layoutMode: 'fitRows'
+}); 
+
+$('#filters a').click(function(){
+    $('#filters a').removeClass('active');
+    $(this).addClass('active');
+    var selector = $(this).attr('data-filter');
+    container.isotope({ filter: selector });
+    setProjects();      
+    return false;
+});
+
+
+function splitColumns() { 
+    var winWidth = $(window).width(), 
+    columnNumb = 1;
+
+
+    if (winWidth > 1500) {
+        columnNumb = 6;
+    } else if (winWidth > 992) {
+        columnNumb = 4;
+    } else if (winWidth > 768) {
+        columnNumb = 3;
+    } else if (winWidth < 479) {
+        columnNumb = 1;
+    }
+    return columnNumb;
+}       
+
+function setColumns() { 
+    var winWidth = $(window).width()-30, 
+    columnNumb = splitColumns(), 
+    postWidth = Math.floor(winWidth / columnNumb);
+
+    container.find('.categories-item').each(function () { 
+        $(this).css( { 
+            width : postWidth + 'px' 
+        });
+    });
+}       
+
+function setProjects() { 
+    setColumns();
+    container.isotope('reLayout');
+}       
+
+container.imagesLoaded(function () { 
+    setColumns();
+});
+
+
+$(window).bind('resize', function () { 
+    setProjects();          
+});
+
+});
+$( window ).load(function() {
+    jQuery('#all').click();
+    return false;
+});  

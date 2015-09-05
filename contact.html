@@ -8,6 +8,7 @@
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
 	<link rel="stylesheet" href="css/style.css"> 
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -58,21 +59,38 @@
 					<input type="text" placeholder="Имя">
 					<input type="email" placeholder="E-mail">
 					<select class="select">
-						<option value="">1</option>
-						<option value="">2</option>
-						<option value="">3</option>
-						<option value="">4</option>
-						<option value="">5</option>
-						<option value="">6</option>
-						<option value="">7</option>
-						<option value="">8</option>
-						<option value="">9</option>
-						<option value="">10</option>
+						<option value="">Выберите автора</option>
+						<option value="">Аслбек Мусин</option>
+						<option value="">Рэй Брэдбери</option>
+						<option value="">Джоан Роулинг</option>
+						<option value="">Эрих Мария Ремарк</option>
+						<option value=""> Федор Достоевский</option>
+						<option value="">Стивен Кинг</option>
+						<option value="">Джером Д. Сэлинджер</option>
+						<option value="">Выберите автора</option>
+						<option value="">Аслбек Мусин</option>
+						<option value="">Рэй Брэдбери</option>
+						<option value="">Джоан Роулинг</option>
+						<option value="">Эрих Мария Ремарк</option>
+						<option value=""> Федор Достоевский</option>
+						<option value="">Стивен Кинг</option>
+						<option value="">Джером Д. Сэлинджер</option>
+						<option value=""> Федор Достоевский</option>
+						<option value="">Стивен Кинг</option>
+						<option value="">Джером Д. Сэлинджер</option>
+						<option value="">Выберите автора</option>
+						<option value="">Аслбек Мусин</option>
+						<option value="">Рэй Брэдбери</option>
+						<option value="">Джоан Роулинг</option>
+						<option value="">Эрих Мария Ремарк</option>
+						<option value=""> Федор Достоевский</option>
+						<option value="">Стивен Кинг</option>
+						<option value="">Джером Д. Сэлинджер</option>
 					</select>
 					<textarea id="" cols="30" rows="10"></textarea>
 					<button class="transition" type="submit"><i></i>Подписаться</button> 
 				</form>
-			</div>
+			</div> 
 		</section>
 		<footer>
 			<div class="prefooter">
@@ -144,81 +162,8 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.isotope.js"></script>
-		<script type="text/javascript">
-
-
-			jQuery(document).ready(function($){     
-// categories Isotope
-var container = $('#categories-wrap');	
-
-
-container.isotope({
-	animationEngine : 'best-available',
-	animationOptions: {
-		duration: 200,
-		queue: false
-	},
-	layoutMode: 'fitRows'
-});	
-
-$('#filters a').click(function(){
-	$('#filters a').removeClass('active');
-	$(this).addClass('active');
-	var selector = $(this).attr('data-filter');
-	container.isotope({ filter: selector });
-	setProjects();		
-	return false;
-});
-
-
-function splitColumns() { 
-	var winWidth = $(window).width(), 
-	columnNumb = 1;
-
-
-	if (winWidth > 1500) {
-		columnNumb = 6;
-	} else if (winWidth > 992) {
-		columnNumb = 4;
-	} else if (winWidth > 768) {
-		columnNumb = 3;
-	} else if (winWidth < 479) {
-		columnNumb = 1;
-	}
-	return columnNumb;
-}		
-
-function setColumns() { 
-	var winWidth = $(window).width()-30, 
-	columnNumb = splitColumns(), 
-	postWidth = Math.floor(winWidth / columnNumb);
-
-	container.find('.categories-item').each(function () { 
-		$(this).css( { 
-			width : postWidth + 'px' 
-		});
-	});
-}		
-
-function setProjects() { 
-	setColumns();
-	container.isotope('reLayout');
-}		
-
-container.imagesLoaded(function () { 
-	setColumns();
-});
-
-
-$(window).bind('resize', function () { 
-	setProjects();			
-});
-
-});
-$( window ).load(function() {
-	jQuery('#all').click();
-	return false;
-});
-</script>
-</body>
-</html>
+		<script type="text/javascript" src="js/selectbox.js"></script>
+		<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>  
+	</body>
+	</html>

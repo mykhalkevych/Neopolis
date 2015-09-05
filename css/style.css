@@ -29,7 +29,7 @@
 body{
 	font-family: "PFDinDisplayProRegular";
 }
-input:focus{
+input:focus,textarea:focus,button:focus{
 	outline: none;
 }
 a, a:hover, a:focus{
@@ -557,6 +557,7 @@ footer .copyright{
 }
 .page_content{
 	padding-top: 75px;
+	padding-bottom: 60px;
 }
 .contacts .page_title{
 	background: url(../img/contact_bg.jpg) no-repeat ;
@@ -571,19 +572,102 @@ footer .copyright{
 	color: #3399ff;
 }
 form.contact input,
-form.contact select,
+.selectbox .select,
 form.contact textarea{
+	font-family: 'PFDinDisplayProLight';
 	width: 100%;
 	margin-bottom: 18px;
 	border-radius: 23px;
 	height: 46px;
-	padding: 0 23px;
+	padding: 0 20px;
 	line-height: 44px;
 	border:2px solid #adaeaf;
+	font-size: 16px;
+}
+form.contact textarea{
+	height: 200px;
+	resize: none;
+}
+form.contact textarea:focus,form.contact input:focus{
+	border-color: #3399ff;
 }
 form.contact button{
 	color: #2b2a29;
+	display: block;
+	margin: 0 auto;
+} 
+.selectbox, .selectbox .select{
+	width: 100%;
+} 
+.selectbox .select:hover, .selectbox.open .select{
+	background: #3399ff;
+	border-color: #3399ff; 
+	color: #fff;
 }
+.selectbox .select:hover .text{
+	color: #fff;
+}
+.trigger{
+	position: absolute; 
+    top: 0;
+    right: 0;
+    width: 40px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 24px; 
+    line-height: 44px;
+} 
+.trigger:before {
+    content: "\f107";
+    font-size: inherit;
+    color: #3399ff;
+}
+.selectbox .select:hover .trigger:before{
+	color: #fff;
+}
+.selectbox.open .trigger:before {
+    content: "\f106";
+    color: #fff;
+}
+.dropdown {
+	width: 100%;
+	z-index: 10!important;
+	top: 5px!important;
+	max-height: 315px!important;
+	overflow: auto;
+	padding: 0;
+	list-style: none;
+	background-color: #fff; 
+	border: 2px solid #3399ff;
+	border-radius: 23px;
+}
+.dropdown ul{
+	list-style: none;
+	padding: 0 20px;
+	line-height: 38px;
+	color: #999;
+}
+.dropdown ul li{
+	font-size: 16px;
+	cursor: default;
+}
+
+/****SCROLL*****/
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	width: 7px;
+	margin-right: 10px;
+}
+
+	.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		background-color: #3399ff; background-color: rgba(51,153,255,0.8);
+		filter: "alpha(opacity=20)"; -ms-filter: "alpha(opacity=20)"; 
+	}
+	
+	.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+		background-color: #3399ff; background-color: rgba(51,153,255,1);
+		filter: "alpha(opacity=50)"; -ms-filter: "alpha(opacity=50)"; 
+	}
+/*************************************/
 /************responsive******/
 @media (min-width: 1600px){
 	 .description{
