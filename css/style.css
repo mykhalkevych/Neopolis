@@ -848,6 +848,15 @@ mark cite{
 .aboutauthor .all_publish{
 	text-transform: none;
 }
+
+/***********POPUP*************/
+.modal-backdrop{
+	background: url(../img/modal_bg.png) no-repeat;
+	background-size: cover;
+}
+.modal-backdrop.in{
+	opacity: 1;
+}
 /************responsive******/
 @media (min-width: 1600px){
 	.description{
