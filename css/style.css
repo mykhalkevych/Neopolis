@@ -399,7 +399,8 @@ i.author{
 	font-family: 'PFDinDisplayProLight';
 	line-height: 1.6;
 }
-.subscribe input,.subscribe button,form.contact button{
+.subscribe input,.subscribe button,form.contact button,
+.modal-content form button{
 	width: 100%;
 	height: 40px;
 	border: 2px solid #adaeaf;
@@ -408,14 +409,16 @@ i.author{
 	color: #2b2a29;
 	margin: 5px 0 10px;
 }
-.subscribe button[type="submit"],form.contact button{
+.subscribe button[type="submit"],form.contact button ,
+.modal-content form button{
 	width: 170px;
 	border: 2px solid #3399ff;
 	background: transparent;
 	text-transform: uppercase;
 	color: #fff; 
 } 
-.subscribe button[type="submit"] i,form.contact button i{
+.subscribe button[type="submit"] i,form.contact button i,
+.modal-content form button i{
 	display: inline-block;
 	width: 14px;
 	height: 12px;
@@ -423,11 +426,13 @@ i.author{
 	margin-bottom: -2px;
 	background: url(../img/arrows.png) no-repeat;
 }
-.subscribe button[type="submit"]:hover ,form.contact button:hover{
+.subscribe button[type="submit"]:hover ,form.contact button:hover,
+.modal-content form button:hover{
 	background: #3399ff;
 	color: #fff;
 }
-.subscribe button[type="submit"]:hover i, form.contact button:hover i{
+.subscribe button[type="submit"]:hover i, form.contact button:hover i,
+.modal-content form button:hover i{
 	background-position: 0px -12px;
 }
 .tags{
@@ -510,40 +515,7 @@ footer .copyright{
 .od{
 	background: #ed812b;
 }
-/* Isotope Transitions */	
-
-.isotope, .isotope .isotope-item {
-	-webkit-transition-duration: 0.8s;
-	-moz-transition-duration: 0.8s;
-	-ms-transition-duration: 0.8s;
-	-o-transition-duration: 0.8s;
-	transition-duration: 0.8s;
-}
-
-.isotope {
-	-webkit-transition-property: height, width;
-	-moz-transition-property: height, width;
-	-ms-transition-property: height, width;
-	-o-transition-property: height, width;
-	transition-property: height, width;
-}
-
-.isotope .isotope-item {
-	-webkit-transition-property: -webkit-transform, opacity;
-	-moz-transition-property: -moz-transform, opacity;
-	-ms-transition-property: -ms-transform, opacity;
-	-o-transition-property: -o-transform, opacity;
-	transition-property: transform, opacity;
-}
-
-.isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition {
-	-webkit-transition-duration: 0s;
-	-moz-transition-duration: 0s;
-	-ms-transition-duration: 0s;
-	-o-transition-duration: 0s;
-	transition-duration: 0s;
-}
-
+ 
 /******************CONTACT***************************/
 .page{
 	background: #ececec;
@@ -582,7 +554,8 @@ section.page .page_title{
 }
 form.contact input,
 .selectbox .select,
-form.contact textarea{
+form.contact textarea,
+.modal-content input{
 	font-family: 'PFDinDisplayProLight';
 	width: 100%;
 	margin-bottom: 18px;
@@ -597,10 +570,12 @@ form.contact textarea{
 	height: 200px;
 	resize: none;
 }
-form.contact textarea:focus,form.contact input:focus{
+form.contact textarea:focus,form.contact input:focus,
+.modal-content input:focus{
 	border-color: #3399ff;
 }
-form.contact button{
+form.contact button,
+.modal-content form button{
 	color: #2b2a29;
 	display: block;
 	margin: 0 auto;
@@ -815,11 +790,13 @@ mark cite{
 .cooperation p.text-center{
 	margin-top: 30px;
 }
-.cooperation form button i{
+.cooperation form button i,
+.modal-content form button i{
     height: 13px;
     background-position: -14px 0px;
 }
-.cooperation form button:hover i{
+.cooperation form button:hover i,
+.modal-content form button:hover i{
 	background-position: -14px -13px;
 }
 
@@ -848,14 +825,57 @@ mark cite{
 .aboutauthor .all_publish{
 	text-transform: none;
 }
-
+/***********Author*************/
+.author2 .page_title{
+	background: url(../img/author2_bg.jpg) no-repeat ; 
+}
+.author2 .page_content{
+	padding-top: 0;
+}
+.author_img{
+	width: 50%;
+	float: left;
+}
 /***********POPUP*************/
+.modal-dialog{
+	width: 640px;
+}
 .modal-backdrop{
 	background: url(../img/modal_bg.png) no-repeat;
 	background-size: cover;
 }
 .modal-backdrop.in{
 	opacity: 1;
+}
+.modal-content {
+	padding: 35px 40px;
+	border-radius: 0;
+}
+.modal-content h4{
+	font-size: 48px;
+	margin-bottom: 30px;
+	color: #3399ff;
+	margin-top: 0;
+}
+.modal-content p{
+	font-family: 'PFDinDisplayProMedium';
+	font-size: 24px;
+	color: #000;
+	margin-bottom: 35px;
+}
+.modal-content form a {
+	float: right;
+}
+.modal-content .checkbox{
+	float: left;
+	margin:0;
+}
+.modal-content .checkbox input{
+	display: none;
+}
+.modal-content form button{
+	font-family: 'PFDinDisplayProMedium';
+	margin-top: 30px;
 }
 /************responsive******/
 @media (min-width: 1600px){
