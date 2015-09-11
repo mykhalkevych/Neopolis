@@ -269,17 +269,25 @@ a:focus{
 	border:2px solid #3399ff;
 }
 .categories-item.isotope-item{
+	width: 25%;
 	border: 3px solid transparent;
 	height: 222px;
 	overflow: hidden;
+	position: relative;
+	float: left;
 } 
 .categories-item.isotope-item:hover .post-overlay,
 .categories-item.isotope-item:focus .post-overlay{
 	text-decoration: none;
 	background: rgba(0,0,0,0);
 }
+.categories-image{
+	height: 100%;
+}
 .categories-item.isotope-item img{
 	width: 100%;
+	height: auto;
+	min-height: 100%;
 }
 .post-overlay {
 	position: absolute;
@@ -350,6 +358,7 @@ i.author{
 .pagination{
 	display: block;
 	text-align: center;
+	margin: 50px 0 40px;
 }
 .pagination li{
 	display: inline-block;
@@ -832,10 +841,7 @@ mark cite{
 .author2 .page_content{
 	padding-top: 0;
 	padding-bottom: 20px;
-}
-.author2 .pagination{
-	margin-top: 60px;
-}
+} 
 .author_img{
 	width: 50%;
 	float: left;
@@ -870,6 +876,23 @@ mark cite{
 	font-size: 18px;
 	text-transform: uppercase;
 	color: #444;
+}
+.letters{
+	list-style: none;
+	padding: 0;
+}
+.letters li{
+	display: inline-block;
+}
+.sort_list{
+	list-style: none;
+	padding: 0;
+	-webkit-column-count:4;  
+	-moz-column-count:4;  
+	column-count:4;
+	-webkit-column-gap: 60px;  
+	-moz-column-gap: 60px;  
+	column-gap: 60px;  
 }
 /***********POPUP*************/
 .modal-dialog{
