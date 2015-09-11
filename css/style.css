@@ -831,10 +831,45 @@ mark cite{
 }
 .author2 .page_content{
 	padding-top: 0;
+	padding-bottom: 20px;
+}
+.author2 .pagination{
+	margin-top: 60px;
 }
 .author_img{
 	width: 50%;
 	float: left;
+	height: 320px;
+	overflow: hidden;
+}
+.author_img img{
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+}
+.author_description{
+	float: left;
+	width: 50%;
+	padding: 3% 6% 0;
+	height: 320px;
+	background: #fff;
+}
+.author_description .name{
+	font-family: 'PFDinDisplayProMedium';
+	font-size: 24px;
+	margin-bottom: 35px;
+}
+.author_description p{
+	font-family: 'PFDinDisplayProLight';
+	font-size: 16px;
+	color: #444;
+	margin-bottom: 35px;
+}
+.author_description .read_more{
+	font-family: 'PFDinDisplayProMedium';
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #444;
 }
 /***********POPUP*************/
 .modal-dialog{
@@ -924,5 +959,8 @@ mark cite{
 	}
 	.navbar-nav>li a:hover{
 		border-color: transparent;
+	}
+	.author_img,.author_description{
+		width: 100%;
 	}
 }
