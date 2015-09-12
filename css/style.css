@@ -922,14 +922,41 @@ mark cite{
 	margin-bottom: 35px;
 }
 .modal-content form a {
+	font-family: 'PFDinDisplayProMedium';
 	float: right;
+	color: #3399ff;
+	font-size: 18px;
 }
 .modal-content .checkbox{
+	font-family: 'PFDinDisplayProBold';
 	float: left;
 	margin:0;
+	font-size: 18px;
+}
+.modal-content .checkbox span{
+	float: left;
+	margin-right: 10px;
+	margin-top: 4px;
+	width: 18px;
+	height: 18px;
+	border-radius: 3px;
+	position: relative;
+	border:2px solid #adaeaf;
+}
+.modal-content .checkbox span i{
+	position: absolute;
+	display: none;
+	width: 8px;
+	height: 8px;
+	background: #3399ff;
+	top: 3px;
+	left: 3px;
 }
 .modal-content .checkbox input{
 	display: none;
+}
+.modal-content .checkbox input:checked ~ span i{
+	display: block;
 }
 .modal-content form button{
 	font-family: 'PFDinDisplayProMedium';
