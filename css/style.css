@@ -724,13 +724,15 @@ mark cite{
 	padding: 15px 25px;
 	color: #375772;
 }
-.all_publish{
+.all_publish,.alphabet h4{
 	font-family: 'PFDinTextProMedium';
 	list-style: none; 
 	padding: 0;
 	text-align: center;
 	font-size: 24px;
 	text-transform: uppercase;
+	color: #3399ff;
+	margin-bottom: 30px;
 } 
 .all_publish a:hover{
 	text-decoration: none;
@@ -877,14 +879,21 @@ mark cite{
 	text-transform: uppercase;
 	color: #444;
 }
+/***************Tags**************/
+.tag .page_title{
+	background: url(../img/сooperation_bg.jpg) no-repeat ; 
+}
+.alphabet{
+	margin-bottom: 55px;
+}
 .letters{
 	list-style: none;
-	padding: 0;
+	padding: 0; 
 }
 .letters li{
     font-family: 'PFDinDisplayProBold';
     display: inline-block;
-    line-height: 26px; 
+    line-height: 28px; 
     text-transform: uppercase;
     font-size: 16px;
     border: 2px solid transparent;
@@ -909,9 +918,14 @@ mark cite{
 	-webkit-column-count:4;  
 	-moz-column-count:4;  
 	column-count:4;
-	-webkit-column-gap: 60px;  
-	-moz-column-gap: 60px;  
-	column-gap: 60px;  
+	-webkit-column-gap: 15px;  
+	-moz-column-gap: 15px;  
+	column-gap: 15px;  
+}
+.sort_list li{
+	font-family: 'PFDinTextProLight';
+	font-size: 18px;
+	color: #444;
 }
 /***********POPUP*************/
 .modal-dialog{
