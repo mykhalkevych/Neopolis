@@ -927,6 +927,28 @@ mark cite{
 	font-size: 18px;
 	color: #444;
 }
+/**********author1*******/
+
+.author1 .categories-item.isotope-item{
+	height: auto;
+}
+.author1 .categories-image{
+	height: 222px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.categories-item .name_a{
+	font-family: 'PFDinDisplayProMedium';
+	font-size: 24px;
+	color: #444;
+}
+.categories-item .question{
+	font-family: 'PFDinDisplayProLight';
+	font-size: 16px;
+	color: #444;
+	height: 66px;
+    overflow: hidden;
+}
 /***********POPUP*************/
 .modal-dialog{
 	width: 640px;
