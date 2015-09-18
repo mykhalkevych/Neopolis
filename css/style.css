@@ -409,7 +409,8 @@ i.author{
 	line-height: 1.6;
 }
 .subscribe input,.subscribe button,form.contact button,
-.modal-content form button{
+.modal-content form button,
+.have_quetions button{
 	width: 100%;
 	height: 40px;
 	border: 2px solid #adaeaf;
@@ -419,7 +420,8 @@ i.author{
 	margin: 5px 0 10px;
 }
 .subscribe button[type="submit"],form.contact button ,
-.modal-content form button{
+.modal-content form button,
+.have_quetions button{
 	width: 170px;
 	border: 2px solid #3399ff;
 	background: transparent;
@@ -427,7 +429,8 @@ i.author{
 	color: #fff; 
 } 
 .subscribe button[type="submit"] i,form.contact button i,
-.modal-content form button i{
+.modal-content form button i,
+.have_quetions button i{
 	display: inline-block;
 	width: 14px;
 	height: 12px;
@@ -436,12 +439,14 @@ i.author{
 	background: url(../img/arrows.png) no-repeat;
 }
 .subscribe button[type="submit"]:hover ,form.contact button:hover,
-.modal-content form button:hover{
+.modal-content form button:hover,
+.have_quetions button:hover{
 	background: #3399ff;
 	color: #fff;
 }
 .subscribe button[type="submit"]:hover i, form.contact button:hover i,
-.modal-content form button:hover i{
+.modal-content form button:hover i,
+.have_quetions button:hover i{
 	background-position: 0px -12px;
 }
 .tags{
@@ -724,7 +729,7 @@ mark cite{
 	padding: 15px 25px;
 	color: #375772;
 }
-.all_publish,.alphabet h4{
+.all_publish,.alphabet h4, .have_quetions p{
 	font-family: 'PFDinTextProMedium';
 	list-style: none; 
 	padding: 0;
@@ -833,8 +838,21 @@ mark cite{
 	width: 100%;
 	height: auto;
 }
-.aboutauthor .all_publish{
+.aboutauthor .all_publish,.have_quetions p{
 	text-transform: none;
+}
+.have_quetions{
+	padding: 70px 0;
+	text-align: center;
+}
+.have_quetions p{
+	margin-bottom: 40px;
+}
+.have_quetions button{
+	font-family: 'PFDinDisplayProMedium';
+	color: #333;
+	font-size: 16px;
+	width: 200px;
 }
 /***********Author*************/
 .author2 .page_title{
@@ -918,9 +936,9 @@ mark cite{
 	-webkit-column-count:4;  
 	-moz-column-count:4;  
 	column-count:4;
-	-webkit-column-gap: 15px;  
-	-moz-column-gap: 15px;  
-	column-gap: 15px;  
+	-webkit-column-gap: 30px;  
+	-moz-column-gap: 30px;  
+	column-gap: 30px;  
 }
 .sort_list li{
 	font-family: 'PFDinTextProLight';
@@ -931,6 +949,10 @@ mark cite{
 
 .author1 .categories-item.isotope-item{
 	height: auto;
+	opacity: 0.9;
+}
+.author1 .categories-item.isotope-item:hover{
+	opacity: 1;
 }
 .author1 .categories-image{
 	height: 222px;
@@ -1016,6 +1038,7 @@ mark cite{
 .modal-content form button{
 	font-family: 'PFDinDisplayProMedium';
 	margin-top: 30px;
+	font-size: 16px;
 }
 /************responsive******/
 @media (min-width: 1600px){
@@ -1055,6 +1078,15 @@ mark cite{
 	.filters li a.watch:before,.filters li a.listen:before{  
 		left: 15px;
 	} 
+	.categories-item.isotope-item{
+		width: 33.33%;
+	}
+	.author_info .photo{
+		height: 250px;
+	}
+	section.page .page_title{
+		background-attachment: inherit;
+	}
 }
 @media (max-width: 767px){  
 	.navbar-nav>li a{
@@ -1067,5 +1099,92 @@ mark cite{
 	}
 	.author_img,.author_description{
 		width: 100%;
+	}
+	.categories-item.isotope-item{
+		width: 50%;
+	}
+	.author_info .photo {
+		height: 230px;
+		width: 320px;
+		float: none; 
+		margin: 0 auto;
+	}
+	.page_title{
+		height: 250px;
+	}
+	.page_title p.title{
+		font-size: 44px;
+	}
+	.modal-dialog{
+		width: auto;
+	}
+	.modal-content{
+		padding: 20px 30px;
+	}
+	.modal-content h4{
+		font-size: 40px;
+		margin-bottom: 10px;
+	}
+	.modal-content p{
+		font-size: 22px;
+		margin-bottom: 15px;
+	}
+	.new_articles{
+		text-align: center;
+	}
+	.blue_line{
+		width: 40px;
+		margin: 0 auto 20px;
+	}
+	.tags{
+		text-align: center;
+		padding-left: 15px;
+	}
+	.prefooter h4{
+		font-size: 20px;
+	}
+	.copyright p.text-left,
+	.copyright p.text-right{
+		display: none;
+	}
+	.copyright .social{
+		margin-left: 0;
+	}
+	article {  
+     -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+     -webkit-column-gap: 0px; 
+    -moz-column-gap: 0px;
+    column-gap: 0px;
+}
+.soc_share, .post_tags{
+	text-align: center;
+}
+.post_tags ul li a{
+	font-size: 14px;
+}
+}
+@media (max-width: 500px){ 
+	.categories-item.isotope-item{
+		width: 100%;
+	}
+	.page_title p.title {
+		font-size: 32px;
+	}
+}
+@media (max-width: 360px){ 
+	.author_info .photo {
+		height: 200px;
+		width: 100%;
+	}
+	.modal-content{
+		padding: 15px;
+	}
+	.modal-content h4 {
+		font-size: 26px;
+	}
+	.modal-content p{
+		font-size: 16px;
 	}
 }

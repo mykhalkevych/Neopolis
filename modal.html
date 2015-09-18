@@ -50,10 +50,10 @@
 			</div> 
 		</header>
 		<br/><br/><br/><br/><br/><br/><br/>
-		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Modal">
 			Посмотреть
 		</button>
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="Modal" tabindex="-1" role="dialog" >
 			<div class="modal-dialog">
 				<div class="modal-content col-lg-12">
 					<h4 class="text-center">Сайт недоступен</h4>
@@ -66,9 +66,22 @@
 							<span><i></i></span>
 							Запомнить меня
 						</label> 
-						<a href="#" data-toggle="modal" data-target="#myModal">Забыли пароль?</a>
+						<a class="lost_pasword"href="#" data-toggle="modal" data-target="#Modal1">Забыли пароль?</a>
 						<div class="clearfix"></div>
 						<button class="transition" type="submit"><i></i>Вход на блог</button> 
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="Modal1" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content col-lg-12">
+					<h4 class="text-center">Восстановление пароля</h4>
+					<p class="text-center">Укажите адрес посты на которою будет выслано подтверждение о сбросе пароля</p>
+					<form>
+						<input type="email" placeholder="Ваш E-mail">   
+						<div class="clearfix"></div>
+						<button class="transition" type="submit"><i></i>Отправить</button> 
 					</form>
 				</div>
 			</div>
