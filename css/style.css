@@ -1059,6 +1059,16 @@ mark cite{
 	.carousel-indicators{
 		top: 150px;
 	}
+	.letters li{ 
+		line-height: 24px;
+		width: 26px;
+	}
+	.sort_list li{
+		font-size: 16px;
+	}
+	.page_content{
+		padding-top: 50px;
+	}
 }
 @media (max-width: 991px){  
 	.carousel-indicators{
@@ -1086,6 +1096,11 @@ mark cite{
 	}
 	section.page .page_title{
 		background-attachment: inherit;
+	}
+	.letters li{
+		font-size: 14px;
+		line-height: 18px;
+		width: 19px;
 	}
 }
 @media (max-width: 767px){  
@@ -1158,11 +1173,24 @@ mark cite{
     -moz-column-gap: 0px;
     column-gap: 0px;
 }
+.sort_list{
+	-webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2; 
+}
 .soc_share, .post_tags{
 	text-align: center;
 }
 .post_tags ul li a{
 	font-size: 14px;
+}
+.alphabet h4{
+	float: left;
+	font-size: 18px;
+}
+.letters li{
+	float: none;
+	display: block;
 }
 }
 @media (max-width: 500px){ 
