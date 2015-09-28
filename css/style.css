@@ -903,11 +903,13 @@ mark cite{
 }
 .alphabet{
 	margin-bottom: 55px;
+	position: relative;
 }
 .letters{
 	list-style: none;
 	padding: 0; 
 }
+
 .letters li{
     font-family: 'PFDinDisplayProBold';
     display: inline-block;
@@ -921,7 +923,7 @@ mark cite{
     width: 32px;
     cursor: pointer;
 }
-.letters li:first-child{
+.letters li:nth-child(2){
 	width: 48px;
 }
 .letters li.active{
@@ -929,6 +931,9 @@ mark cite{
 }
 .letters li:hover{
 	border: 2px solid #3399ff;
+}
+li.mobile_select{
+	display: none; 
 }
 .sort_list{
 	list-style: none;
@@ -1070,7 +1075,30 @@ mark cite{
 		padding-top: 50px;
 	}
 }
-@media (max-width: 991px){  
+@media (max-width: 991px){
+	.container>.navbar-header{
+		width: 22%;
+		margin-top: 7px;
+	}  
+	.navbar-nav{
+		margin-left: 5px;
+	}
+	.navbar-brand>img{
+		width: 100%;
+		height: auto;
+	}
+	.navbar-default .navbar-brand{
+		padding: 13px 0;
+	}
+	.navbar-default .navbar-nav>li a{
+		padding: 0 20px;
+	}
+	.navbar .pull-right.col-sm-3{
+		padding: 0;
+	}
+	.search:hover input{
+		width: 75%;
+	}
 	.carousel-indicators{
 		top: 125px;
 	}
@@ -1104,10 +1132,34 @@ mark cite{
 	}
 }
 @media (max-width: 767px){  
+	.container>.navbar-header{
+		width: 100%;
+		margin-top: 0;
+	} 
+	.navbar-default .navbar-brand{
+		width: 200px;
+		margin: 0 auto;
+		float: none;
+		display: block;
+	}
+	.navbar-default .navbar-toggle{
+		float: left;
+		margin-top: 22px;
+		margin-left: 15px;
+	}
+	.navbar-nav{
+		margin: 0;
+	}
 	.navbar-nav>li a{
 		font-size: 13px;
 		text-align: center;
 		line-height: 36px;
+	}
+	.navbar-default .navbar-nav>li a{
+		line-height: 48px;
+	}
+	.navbar-nav>li a:after{
+		display: none;
 	}
 	.navbar-nav>li a:hover{
 		border-color: transparent;
@@ -1184,13 +1236,47 @@ mark cite{
 .post_tags ul li a{
 	font-size: 14px;
 }
+.alphabet{
+	margin-bottom: 0;
+}
 .alphabet h4{
 	float: left;
 	font-size: 18px;
+	margin-top: 0;
+}
+li.mobile_select{
+	display: block;
+	color: #333;
+	font-size: 16px;
+	position: absolute;
+	top: 0;
+	background: #eee; 
+}
+.mobile_select:after{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 0;
+	border: 5px solid transparent;
+	border-top: 5px solid #333;
+}
+.letters{
+	float: left;
+	padding-top: 22px;
+	margin-left: 15px;
+    height: 22px;
+    overflow: hidden; 
 }
 .letters li{
 	float: none;
 	display: block;
+	width: 50px;
+	text-align: left; 
+	font-size: 16px;
+}
+.letters li:hover{
+	border-color: transparent;
 }
 }
 @media (max-width: 500px){ 
